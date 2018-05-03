@@ -12,7 +12,7 @@ Este proyecto se basa en atacar a los puntos de una API creada con NEST, la cual
 
 ## 1. Preparar entorno (API + DB)
 
-**Clonar el repositorio de la API de NEST:**
+**Clonar el [repositorio de @jrubiocap de la API de NEST](https://github.com/jsrubio/todo-nestjs):**
 
 `$ git clone https://github.com/jsrubio/todo-nestjs.git`
 
