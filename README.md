@@ -1,27 +1,43 @@
-# NgStarterMaterial
+# Ng Material Finished
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
-## Development server
+Proyecto de Angular finalizado para el seminario del día 19/04/2018 en el master de [**Tecnologías Web, Computación en la Nube y Aplicaciones Móviles**](https://www.uv.es/uvweb/master-ingenieria-servicios-aplicaciones-web/es/master-universitario-tecnologias-web-computacion-nube-aplicaciones-moviles-1285882930977.html) (TWCAM) de la **Universitat de València**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![](https://upload.wikimedia.org/wikipedia/en/c/c1/University_of_Valencia_seal.png)
 
-## Code scaffolding
+Este proyecto se basa en atacar a los puntos de una API creada con NEST, la cual a su vez guarda los datos manejados en una base de datos PostgreSQL levantada en un contenedor de Docker.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 1. Preparar entorno (API + DB)
 
-## Build
+**Clonar el repositorio de la API de NEST:**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+`$ git clone https://github.com/jsrubio/todo-nestjs.git`
 
-## Running unit tests
+**Ejecutar el script del repositorio:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`$ cd todo-nestjs && ./run.sh`
 
-## Running end-to-end tests
+**Este script hace lo siguiente:**
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+````bash
+# Levanta el contenedor de la base de datos en el 27017:
+$ docker run --name mongo -d -p 27017:27017 mongo`
 
-## Further help
+# Crea un "config.json" a partir de un ejemplo:
+$ cp config.json.example config.json
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Levanta la API en el 3000:
+$ yarn start
+````
+
+## 2. Servir aplicación de Angular
+
+**Ejecutar el comando "server" del Angular CLI en el directorio principal del proyecto**:
+
+````bash
+$ cd ng-material-finished-uv && \
+    ng serve
+````
