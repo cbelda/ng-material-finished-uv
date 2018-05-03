@@ -24,7 +24,7 @@ Este proyecto se basa en atacar a los puntos de una API creada con NEST, la cual
 
 ````bash
 # Levanta el contenedor de la base de datos en el 27017:
-$ docker run --name mongo -d -p 27017:27017 mongo`
+$ docker run --name mongo -d -p 27017:27017 mongo
 
 # Crea un "config.json" a partir de un ejemplo:
 $ cp config.json.example config.json
